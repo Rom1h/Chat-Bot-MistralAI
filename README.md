@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chatbot with Mistral AI
 
-## Getting Started
+A simple demo project of a chatbot built with Next.js , TypeScript, using the Mistral AI API to generate responses.  
 
-First, run the development server:
+[Open demo](https://chat-bot-mistral-ai.vercel.app/)
 
+## Features
+- Chat interface.  
+- Conversation history stored on the client side.  
+- Messages sent to an internal API route that calls **Mistral AI (`mistral-small-latest`)**.  
+
+## Installation
+
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Rom1h/Chat-Bot-MistralAI.git
+cd Chat-Bot-MistralAI
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Configure environment variables
+Create a `.env.local` file at the project root with your Mistral API key:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+API_KEY=your_api_key
+```
 
-## Learn More
+### 4. Run the application
+```bash
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Then open [http://localhost:3000](http://localhost:3000).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Usage
+Once the app is running:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Type a message in the text box at the bottom of the page.  
+2. Click on the Send button.  
+3. The assistant will reply using Mistral AI.  
+4. The full conversation will remain visible in the chat window until you refresh the page.  
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Notes
+- This project is for demonstration purposes only.  
+- Make sure to keep your API key safe and never expose it publicly.  
